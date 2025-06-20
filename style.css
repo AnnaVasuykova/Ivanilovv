@@ -1,0 +1,538 @@
+/* Общие стили */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF9E6;
+    color: #333;
+    min-height: 100vh; /* Занимает всю высоту экрана */
+}
+
+main {
+  flex: 1; /* Занимает все свободное место */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+h3 {
+    font-size: 1.5em; /* или любое другое значение */
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+/* Шапка */
+header {
+    background-color: #8B9A47;
+    color: white;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02); /* Поворот и увеличение */
+}
+
+.logo img {
+    width: 350px;
+    margin-right: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a { /* Замените .nav-link на фактический класс ваших ссылок */
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding-bottom: 2px; /* Небольшой отступ снизу для линии */
+  display: inline-block; /* Важно для transform */
+}
+
+header nav ul li a:hover {
+  color: #e9eb86; /* Изменяем цвет при наведении */
+  transform: scale(1.1); /* Увеличиваем размер */
+}
+
+.contact-info a {
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+     display: inline-block;
+}
+
+.contact-info a:hover {
+  color: #e9eb86; /* Изменяем цвет при наведении */
+  transform: scale(1.1); /* Увеличиваем размер */
+}
+
+
+/* Hero-баннер */
+.hero {
+    background-color: #FFF9E6;
+    color: #333;
+    padding: 50px 0;
+}
+
+.hero-container { /*  Новые стили для контейнера ТОЛЬКО внутри hero  */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image {
+    max-width: 40%; /*  Уменьшаем ширину изображения, чтобы было место для текста */
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.hero-content {
+    /*  Убираем text-align: center;  */
+    max-width: 50%; /* Занимает до 50% ширины */
+}
+
+.btn {
+    background-color: #6B8E23;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    display: inline-block; /* чтобы кнопка не растягивалась на всю ширину */
+    margin-top: 50px; /* Отступ между текстом и кнопкой */
+}
+
+.btn:hover {
+    background-color: #8FBC8F; /* Более светлый оттенок при наведении */
+    transform: scale(1.1); /* Небольшое увеличение размера */
+}
+
+.container-index {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex; /* Теперь это flex-контейнер */
+    flex-direction: column; /* Располагаем в колонку */
+    align-items: center; /* Выравниваем по центру */
+}
+
+/* О нас */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+/* Культуры */
+.cultures {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cultures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    text-align: center; /* Выравниваем текст по центру внутри элемента */
+}
+
+.culture-item {
+  display: flex; /*  Используем flexbox для вертикального расположения  */
+  flex-direction: column; /*  Располагаем элементы в колонку  */
+  align-items: center; /*  Выравниваем элементы по центру по горизонтали  */
+}
+
+.culture-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    /* object-position: center; */ /*  Удалите это, если не нужно  */
+    margin-bottom: 10px; /*  Отступ между изображением и текстом  */
+}
+
+/* Преимущества */
+.advantages {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.advantages-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.advantage {
+    text-align: center;
+}
+
+.advantage img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Каталог (catalog.html) */
+
+/*  Основной контейнер каталога  */
+.catalog-page {
+  width: 100%; /* Занимаем всю ширину страницы */
+  margin: 0 auto; /* Центрируем контейнер, если нужно */
+  padding: 20px; /*  Добавьте отступы, если нужно  */
+}
+
+.container-catalog{ /* контейнер для фильтров и продуктов */
+    display: flex;
+    flex-direction: column; /* располагаем элементы вертикально */
+    width: 100%;
+    max-width: 2000px; /* Максимальная ширина контента */
+    margin: 0 auto; /* Центрируем по горизонтали */
+}
+
+.filters {
+    width: 50%; /* Фильтры на всю ширину */
+    padding: 20px;
+    background-color: #fff6da;
+    box-sizing: border-box; /* Важно, чтобы padding не увеличивал ширину */
+    margin: 0 auto;
+}
+
+.filters h3, .filters h4 {
+    margin-bottom: 10px;
+}
+
+.filters input[type="text"], .filters select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.products {
+    padding: 20px;
+}
+
+.product-grid {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;  /*  Заменяем grid на flex  */
+    flex-wrap: wrap; /*  Перенос на новую строку, если не помещаются  */
+    justify-content: center; /*  Выравнивание элементов по левому краю  */
+    gap: 20px;
+}
+
+.product-card {
+    width: 250px; /* Фиксированная ширина карточки */
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход для transform и box-shadow */
+}
+
+.product-card:hover {
+    transform: translateY(-5px) scale(1.03); /* Поднимаем и немного увеличиваем */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+/* main */
+.main-blog{
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Стили для блога */
+.blog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #ddd;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #333333; /* Исходный цвет ссылки */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.card a:hover {
+    color: #8bb831; /* Цвет ссылки при наведении */
+}
+
+#blog-post img {
+  max-width: 100%; /* Максимальная ширина, чтобы не выходить за пределы контейнера */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+  max-height: 400px; /* Ограничиваем максимальную высоту */
+  display: block; /* Убираем лишние отступы снизу */
+}
+
+/* Подвал (Footer) */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /*  Для sticky footer */
+}
+
+footer .container {
+    padding: 10px;
+}
+/* footer */
+footer{
+    background-color: #8B9A47;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto; /* Прижимает подвал к низу */
+}
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product-details {
+  text-align: center; /* Выравниваем содержимое по центру по горизонтали */
+}
+
+.product-details img {
+  display: inline-block; /* Нужно для text-align */
+  max-width: 50%; /* Или задайте конкретную ширину */
+  height: auto;
+}
+
+#contacts {
+    background-color: #FFF9E6;
+    padding: 40px 0;
+}
+
+#contacts .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contacts h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.contact-wrapper {
+    /* display: flex;  Убираем Flexbox */
+    /* justify-content: space-between;   Убираем, так как нет Flexbox */
+    /* align-items: flex-start;  Убираем, так как нет Flexbox */
+    display: grid;  /* Добавляем Grid */
+    grid-template-columns: 1fr; /* Одна колонка */
+    grid-gap: 20px; /* Отступ между секциями */
+}
+
+.form-section {
+    width: 100%;  /* Занимает всю ширину */
+}
+
+.form-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Важно, чтобы padding не увеличивал ширину */
+}
+
+#contact-form textarea {
+    resize: vertical; /* Разрешаем изменение высоты textarea */
+}
+
+#contact-form button[type="submit"] {
+    background-color: #6B8E23;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: #a4c661;
+}
+
+.info-section {
+    width: 100%;  /* Занимает всю ширину */
+}
+
+.info-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Выравниваем иконки по центру */
+}
+
+.social-links a {
+    display: block; /* Ссылка занимает всю область */
+}
+
+.social-links img {
+    width: 40px; /* Размер иконок */
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2); /* Увеличение при наведении */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .hero-container {
+        flex-direction: column; /* При маленьком экране - в колонку */
+    }
+
+    .hero-content, .hero-image {
+        max-width: 100%; /* Занимают всю ширину */
+    }
+
+    .hero-image {
+        margin-top: 20px; /*  Отступ между текстом и картинкой на маленьком экране */
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        margin-top: 10px;
+    }
+
+    .advantages-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantage {
+        margin-bottom: 20px;
+    }
+
+    .catalog-page {
+        flex-direction: column;
+    }
+
+    .filters {
+        width: 100%;
+    }
+}
